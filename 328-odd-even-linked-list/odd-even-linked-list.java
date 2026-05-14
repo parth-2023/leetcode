@@ -10,13 +10,13 @@
  */
 class Solution {
     public ListNode oddEvenList(ListNode head) {
-        if(head==null || head.next==null)return head;
-        ListNode odd=head, even=odd.next, evenhead=even;
+        if(head==null||head.next==null)return head;
+        ListNode odd=head, even=odd.next,evenhead=even;
         while(even!=null&&even.next!=null){
             odd.next=even.next;
             even.next=even.next.next;
-            odd=odd.next;
             even=even.next;
+            odd=odd.next;
         }
         odd.next=evenhead;
         return head;
