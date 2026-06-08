@@ -21,8 +21,6 @@ class Solution {
             i++;
             j--;
         }
-
-        // Remaining positions contain pivot
         while (left <= right) {
             ans[left++] = pivot;
         }
