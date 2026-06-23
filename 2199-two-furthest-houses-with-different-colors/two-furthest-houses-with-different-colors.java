@@ -7,7 +7,7 @@ class Solution {
                 res=right-left;
                 break;
             }
-            else right--;
+            right--;
         }
         right=colors.length-1;
         while(left<right){
