@@ -5,6 +5,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/parth-2023/leetcode/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
+| [1979-find-greatest-common-divisor-of-array](https://github.com/parth-2023/leetcode/tree/main/1979-find-greatest-common-divisor-of-array/) | Easy |
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -25,6 +26,7 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0070-climbing-stairs](https://github.com/parth-2023/leetcode/tree/main/0070-climbing-stairs/) | Easy |
+| [1979-find-greatest-common-divisor-of-array](https://github.com/parth-2023/leetcode/tree/main/1979-find-greatest-common-divisor-of-array/) | Easy |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -33,4 +35,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0070-climbing-stairs](https://github.com/parth-2023/leetcode/tree/main/0070-climbing-stairs/) | Easy |
+## Number Theory
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1979-find-greatest-common-divisor-of-array](https://github.com/parth-2023/leetcode/tree/main/1979-find-greatest-common-divisor-of-array/) | Easy |
 <!---LeetCode Topics End-->
