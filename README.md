@@ -39,4 +39,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/parth-2023/leetcode/tree/main/1979-find-greatest-common-divisor-of-array/) | Easy |
+## Bit Manipulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0461-hamming-distance](https://github.com/parth-2023/leetcode/tree/main/0461-hamming-distance/) | Easy |
 <!---LeetCode Topics End-->
