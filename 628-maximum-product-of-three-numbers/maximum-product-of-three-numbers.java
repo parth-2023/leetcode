@@ -1,7 +1,32 @@
 class Solution {
     public int maximumProduct(int[] nums) {
-        Arrays.sort(nums);
-        int res= nums[nums.length-1]*nums[nums.length-2]*nums[nums.length-3]>nums[nums.length-1]*nums[0]*nums[1]? nums[nums.length-1]*nums[nums.length-2]*nums[nums.length-3]:nums[nums.length-1]*nums[0]*nums[1];
-        return res;
+        int a=Integer.MIN_VALUE;
+        int b=Integer.MIN_VALUE;
+        int c=Integer.MIN_VALUE;
+        int x=Integer.MAX_VALUE;
+        int y=Integer.MAX_VALUE;
+
+        for(int i:nums){
+            if(i>=a){
+                c=b;
+                b=a;
+                a=i;
+            }
+            else if(i>=b){
+                c=b;
+                b=i;
+            }
+            else if(i>c){
+                c=i;
+            }
+            if(i<=x){
+                y=x;
+                x=i;
+            }
+            else if(i<y){
+                y=i;
+            }
+        }
+        return a*b*c>a*x*y?a*b*c:a*x*y;
     }
 }
