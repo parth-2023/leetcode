@@ -9,7 +9,7 @@ class Solution {
             int y=pq.remove();
             if(x-y>0) pq.add(x-y);
         }
-        if(pq.size()>0)return pq.peek();
+        if(pq.size()==1)return pq.peek();
         return 0;
     }
 }
