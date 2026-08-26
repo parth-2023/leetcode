@@ -2,7 +2,7 @@ class Solution {
     public int leastInterval(char[] tasks, int n) {
         Queue<Integer> maxHeap= new PriorityQueue<>(Collections.reverseOrder());
         int[] count= new int[26];
-        for(int task:tasks){
+        for(char task:tasks){
             count[task-'A']++;
         }
         for(int cnt:count){
