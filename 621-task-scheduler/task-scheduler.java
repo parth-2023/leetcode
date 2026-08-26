@@ -1,28 +1,15 @@
 class Solution {
     public int leastInterval(char[] tasks, int n) {
-        Queue<Integer> maxHeap= new PriorityQueue<>(Collections.reverseOrder());
-        int[] count= new int[26];
-        for(char task:tasks){
-            count[task-'A']++;
+        int[] count=new int[26];
+        int maxf=0;
+        for(char a:tasks){
+            count[a-'A']++;
+            maxf=Math.max(maxf, count[a-'A']);
         }
+        int sameMaxf=0;
         for(int cnt:count){
-            if(cnt>0) maxHeap.add(cnt);
+            if(cnt==maxf)sameMaxf++;
         }
-        Queue<int[]> q= new LinkedList<>();
-        int time=0;
-        while(!maxHeap.isEmpty()||!q.isEmpty()){
-            time++;
-            if(maxHeap.isEmpty()){
-                time=q.peek()[1];
-            }
-            else{
-                int cnt=maxHeap.poll()-1;
-                if(cnt>0) q.add(new int[] {cnt, time+n});
-            }
-            if(!q.isEmpty()&&q.peek()[1]==time){
-                maxHeap.add(q.poll()[0]);
-            }
-        }
-        return time;
+        return Math.max(tasks.length, (maxf-1)*(n+1)+sameMaxf);
     }
 }
