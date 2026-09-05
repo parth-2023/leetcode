@@ -3,8 +3,10 @@ class Solution {
         int[] count= new int[26];
         for(int i=0; i<s.length();i++){
             count[s.charAt(i)-'a']++;
-            String c=String.valueOf(s.charAt(i));
-            if(!s.substring(i+1).contains(c)&&count[s.charAt(i)-'a']==1) return i;
+        }
+        for(int i=0; i<s.length(); i++){
+            char c= s.charAt(i);
+            if(count[s.charAt(i)-'a']==1) return i;
         }
         return -1;
     }
