@@ -6,7 +6,7 @@ class Solution {
             for(int j=0; j<accounts[0].length; j++){
                 moneyHeHas+=accounts[i][j];
             }
-            mostMoney=Math.max(mostMoney, moneyHeHas);
+            if(moneyHeHas>mostMoney) mostMoney=moneyHeHas;
         }
         return mostMoney;
     }
