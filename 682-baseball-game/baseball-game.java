@@ -1,15 +1,20 @@
 class Solution {
     public int calPoints(String[] operations) {
-        int sum=0;
-        List<Integer> list = new ArrayList<>();
+        Stack<Integer> st= new Stack<>();
         for(String s:operations){
-            if(s.contains("+"))list.add(list.get(list.size()-1)+list.get(list.size()-2));
-            else if(s.contains("C"))list.removeLast();
-            else if(s.contains("D"))list.add(list.get(list.size()-1)*2);
-            else list.add(Integer.valueOf(s));
+            if(s.contains("+")){
+                int last=st.pop();
+                int seclast=st.peek();
+                st.push(last);
+                st.push(last+seclast);
+            }
+            else if(s.contains("C"))st.pop();
+            else if(s.contains("D"))st.add(st.peek()*2);
+            else st.push(Integer.valueOf(s));
         }
-        for(int i:list){
-            sum+=i;
+        int sum=0;
+        while(!st.isEmpty()){
+            sum+=st.pop();
         }
         return sum;
     }
